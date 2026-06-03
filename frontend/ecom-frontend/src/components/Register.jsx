@@ -51,6 +51,7 @@ const Register = () => {
               placeholder="Full Name"
               className="w-full h-12 px-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-black transition"
               onChange={handleChange}
+              name="username"
             />
 
             {/* Email */}
@@ -59,6 +60,7 @@ const Register = () => {
               placeholder="Email Address"
               className="w-full h-12 px-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-black transition"
               onChange={handleChange}
+              name="email"
             />
 
             {/* Age */}
@@ -68,16 +70,18 @@ const Register = () => {
               min="18"
               className="w-full h-12 px-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-black transition"
               onChange={handleChange}
+              name="age"
             />
 
             {/* Role */}
             <select
               className="w-full h-12 px-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-black transition"
               onChange={handleChange}
+              name="role"
             >
               <option value="">Select Role</option>
-              <option value="USER">User</option>
-              <option value="ADMIN">Admin</option>
+              <option value="user">user</option>
+              <option value="admin">admin</option>
             </select>
 
             {/* Password */}
@@ -86,6 +90,7 @@ const Register = () => {
               placeholder="Password"
               className="w-full h-12 px-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-black transition"
               onChange={handleChange}
+              name="password"
             />
 
             {/* Confirm Password */}

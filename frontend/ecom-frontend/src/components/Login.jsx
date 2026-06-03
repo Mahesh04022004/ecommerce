@@ -20,7 +20,7 @@ const Login = () => {
     try {
       const response = await api.post("/auth/login", formData);
       const token = response.data.token;
-      login(token);
+      login(token, response.data.user);
       navigate("/");
     } catch (error) {
       console.error(error);
@@ -57,6 +57,7 @@ const Login = () => {
               placeholder="Email Address"
               className="w-full h-12 px-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-black transition"
               onChange={handleChange}
+              name="email"
             />
 
             {/* Password */}
@@ -65,6 +66,7 @@ const Login = () => {
               placeholder="Password"
               className="w-full h-12 px-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-black transition"
               onChange={handleChange}
+              name="password"
             />
 
             {/* Button */}
